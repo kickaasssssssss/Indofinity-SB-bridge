@@ -118,6 +118,13 @@ function connectTikFinity() {
           break;
         }
 
+        case "member": {
+          const member = data.data;
+          console.log(`${member.nickname || member.uniqueId} join!`);
+          sbClient.executeCodeTrigger("tikfinity.member", member);
+          break;
+        }
+
         case "subscribe": {
           const sub = data.data;
           console.log(`${sub.nickname || sub.uniqueId} subscribed!`);
