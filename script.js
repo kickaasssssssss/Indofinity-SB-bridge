@@ -75,7 +75,7 @@ function connectStreamerbotClient() {
 
 // TikFinity setup
 function connectTikFinity() {
-  const socket = new WebSocket("ws://localhost:21213");
+  const socket = new WebSocket("ws://localhost:62024");
 
   socket.onopen = () => {
     if (!tikfinityConnected) {
