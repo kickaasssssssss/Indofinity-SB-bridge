@@ -138,6 +138,13 @@ function connectTikFinity() {
           sbClient.executeCodeTrigger("tikfinity.like", like);
           break;
         }
+          
+          case "roomUser": {
+          const room = data.data;
+          console.log(`Theres ${room.viewerCount} total user`);
+          sbClient.executeCodeTrigger("tikfinity.room", room);
+          break;
+        }
 
         case "share": {
           const share = data.data;
